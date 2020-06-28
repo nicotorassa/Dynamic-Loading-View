@@ -29,13 +29,19 @@ dependencies {
     android:id="@+id/dynamic_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red" />
+    android:background="@color/coffee" />
 ```
 
 **Step 2**. Set icons and colors
 ```java
-int[] colors = {R.color.blue};
-int[] icons = {R.drawable.ic_launcher_foreground};
+int[] colors = {
+        R.color.white
+};
+int[] icons = {
+        R.drawable.ic_coffee_breaks,
+        R.drawable.ic_coffee_cup,
+        R.drawable.ic_coffee_cup_2,
+        R.drawable.ic_coffee_capsules};
 dynamicLoadingView.setColors(colors);
 dynamicLoadingView.setIcons(icons);
 ```
@@ -43,3 +49,6 @@ dynamicLoadingView.setIcons(icons);
 ```java
 dynamicLoadingView.start();
 ```
+
+## Result
+![Coffee Loading](screenshots/coffee-loading.gif)
