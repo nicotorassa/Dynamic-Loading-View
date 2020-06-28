@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dynamic_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+
+        <ImageView style="@style/DynamicLoadingViewTheme.IconFadeAnimation" />
+    </LinearLayout>
+
+</LinearLayout>
