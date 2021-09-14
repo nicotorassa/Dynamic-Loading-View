@@ -14,8 +14,6 @@ import com.artificioo.dynamicloadingview.R
 class DynamicLoadingView : LinearLayout {
     private var ICONS: IntArray? = null
     private var COLORS: IntArray? = null
-    private var randomIcon: Int? = null
-    private var randomColor: Int? = null
 
     constructor(context: Context?) : super(context) {
         init(null, 0)
@@ -42,12 +40,11 @@ class DynamicLoadingView : LinearLayout {
         for (i in 0 until parentView.childCount) {
             val dynamicRow = parentView.getChildAt(i) as LinearLayout
             for (j in 0 until dynamicRow.childCount) {
-                randomIcon?.let { icon ->
+                getRandomIcon()?.let { icon ->
                     val dynamicImage = dynamicRow.getChildAt(j) as ImageView
                     dynamicImage.alpha = 0f
                     dynamicImage.setImageResource(icon)
-                    val colorId = randomColor
-                    colorId?.let { color ->
+                    getRandomColor()?.let { color ->
                         dynamicImage.imageTintList = ColorStateList.valueOf(
                             ContextCompat.getColor(
                                 context, color
@@ -62,20 +59,10 @@ class DynamicLoadingView : LinearLayout {
 
     fun setIcons(icons: IntArray) {
         ICONS = icons
-        ICONS?.let {
-            if (it.isNotEmpty()) {
-                randomIcon = it[(Math.random() * it.size).toInt()]
-            }
-        }
     }
 
     fun setColors(colors: IntArray) {
         COLORS = colors
-        COLORS?.let {
-            if (it.isNotEmpty()) {
-                randomColor = it[(Math.random() * it.size).toInt()]
-            }
-        }
     }
 
     private fun makeViewAnimation(view: ImageView) {
@@ -93,9 +80,9 @@ class DynamicLoadingView : LinearLayout {
         fadeOutAnimation.setAnimationListener(object : AnimationListener {
             override fun onAnimationStart(animation: Animation) {}
             override fun onAnimationEnd(animation: Animation) {
-                randomIcon?.let { icon ->
+                getRandomIcon()?.let { icon ->
                     view.setImageResource(icon)
-                    randomColor?.let { color ->
+                    getRandomColor()?.let { color ->
                         view.imageTintList = ColorStateList.valueOf(
                             ContextCompat.getColor(
                                 context, color
@@ -110,5 +97,23 @@ class DynamicLoadingView : LinearLayout {
         })
         view.alpha = 1f
         view.startAnimation(fadeInAnimation)
+    }
+
+    fun getRandomIcon(): Int? {
+        ICONS?.let {
+            if (it.isNotEmpty()) {
+                return it[(Math.random() * it.size).toInt()]
+            }
+        }
+        return null
+    }
+
+    fun getRandomColor(): Int? {
+        COLORS?.let {
+            if (it.isNotEmpty()) {
+                return it[(Math.random() * it.size).toInt()]
+            }
+        }
+        return null
     }
 }
