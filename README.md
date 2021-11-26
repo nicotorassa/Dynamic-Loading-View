@@ -17,7 +17,7 @@ allprojects {
 **Step 2**. Add the dependency
 ```java
 dependencies {
-        implementation 'com.github.nicotorassa:Dynamic-Loading-View:0.2.3'
+        implementation 'com.github.nicotorassa:Dynamic-Loading-View:0.1.2'
 }
 ```
 
